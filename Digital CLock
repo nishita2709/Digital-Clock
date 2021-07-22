@@ -1,0 +1,35 @@
+#import library
+#tkinter library to create GUI Window
+
+from  tkinter import *
+
+#time library to get current system time
+from  time import strftime
+
+#define function to get current time
+
+def time():
+    #get current time in given format
+    str=strftime("%H : %M : %S %p")
+    
+    #passing time to label
+    lbl.config(text=str)
+    
+    #refresh label every second
+    lbl.after(1000,time)
+    
+#creating GUI window
+myWindow=Tk()
+
+#setting title to window
+myWindow.title("Digital Clock")
+
+#creating label to dispaly digital clock
+lbl=Label(myWindow,font=("Arial",120),background="black",foreground="cyan")
+lbl.pack()
+
+#calling time function
+time()
+
+#Calling function to Run Application
+mainloop()
