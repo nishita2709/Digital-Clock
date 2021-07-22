@@ -25,7 +25,7 @@ myWindow=Tk()
 myWindow.title("Digital Clock")
 
 #creating label to dispaly digital clock
-lbl=Label(myWindow,font=("Arial",120),background="black",foreground="cyan")
+lbl=Label(myWindow,font=("Arial",120),background="blue",foreground="white")
 lbl.pack()
 
 #calling time function
